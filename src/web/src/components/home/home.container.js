@@ -49,7 +49,7 @@ function HomeContent() {
       <h1 className="text-4xl font-bold text-center mt-10">Best Movies</h1>
 
       <Container
-        maxWidth="100%"
+        // className="clac(100%-16rem)"
         sx={{
           backgroundColor: "background.default",
           padding: "2rem",
@@ -125,7 +125,7 @@ function HomeContent() {
       </Container>
 
       <Container
-        maxWidth="100%"
+      // className="w-[clac(100%-16rem)]"
         sx={{
           backgroundColor: "info.dark",
           padding: "2rem",
