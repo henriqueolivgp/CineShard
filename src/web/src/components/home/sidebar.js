@@ -24,14 +24,18 @@ export function Sidebar() {
           <div className="h-px bg-slate-200 w-full"></div>
           <div className="flex flex-col min-h-[92%] justify-between">
             <ul className=" flex flex-col space-y-1 px-3 py-4 gap-2 font-medium">
-              <li>
-                <Link to="/" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-500 dark:hover:bg-gray-700 group">
-                  <svg className="flex-shrink-0 w-5 h-5 text-gray-400 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                    <path fillRule="evenodd" d="M11.3 3.3a1 1 0 0 1 1.4 0l6 6 2 2a1 1 0 0 1-1.4 1.4l-.3-.3V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3c0 .6-.4 1-1 1H7a2 2 0 0 1-2-2v-6.6l-.3.3a1 1 0 0 1-1.4-1.4l2-2 6-6Z" clipRule="evenodd" />
-                  </svg>
-                  <span className="flex-1 ms-3 whitespace-nowrap text-white">Home</span>
-                </Link>
-              </li>
+              {signed ? (
+                <li>
+                  <Link to="/" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-500 dark:hover:bg-gray-700 group">
+                    <svg className="flex-shrink-0 w-7 h-7 text-gray-400 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                      <path fillRule="evenodd" d="M11.3 3.3a1 1 0 0 1 1.4 0l6 6 2 2a1 1 0 0 1-1.4 1.4l-.3-.3V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3c0 .6-.4 1-1 1H7a2 2 0 0 1-2-2v-6.6l-.3.3a1 1 0 0 1-1.4-1.4l2-2 6-6Z" clipRule="evenodd" />
+                    </svg>
+                    <span className="flex-1 ms-3 whitespace-nowrap text-white">Home</span>
+                  </Link>
+                </li>
+              ) : (
+                null
+              )}
               {!signed ? (
                 <>
                   <li>
@@ -51,25 +55,33 @@ export function Sidebar() {
                     </Link>
                   </li>
                 </>
-              ):(
+              ) : (
                 null
               )}
-              <li>
-                <Link to={'/admin-panel'} className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-500 dark:hover:bg-gray-700 group">
-                  <ShieldMinus className="text-gray-400" />
-                  <span className="flex-1 ms-2 whitespace-nowrap text-white">Admin Panel</span>
-                </Link>
-              </li>
+              {signed ? (
+                <li>
+                  <Link to={'/admin-panel'} className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-500 dark:hover:bg-gray-700 group">
+                    <ShieldMinus className="text-gray-400" size={28} />
+                    <span className="flex-1 ms-2 whitespace-nowrap text-white">Admin Panel</span>
+                  </Link>
+                </li>
+              ) : (
+                null
+              )}
             </ul>
-            <div className="px-3 py-4">
-              <Link to={'/login'} onClick={logout} className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-500 dark:hover:bg-gray-700 group">
-                <Power className="text-gray-400" />
-                <span className="flex-1 ms-3 whitespace-nowrap text-white">Logout</span>
-              </Link>
-            </div>
+            {signed ? (
+              <div className="px-3 py-4">
+                <Link to={'/login'} onClick={logout} className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-500 dark:hover:bg-gray-700 group">
+                  <Power className="text-gray-400" size={28} />
+                  <span className="flex-1 ms-3 whitespace-nowrap text-white">Logout</span>
+                </Link>
+              </div>
+            ) : (
+              null
+            )}
           </div>
         </div>
-      </aside>
+      </aside >
     </>
   )
 }
