@@ -8,7 +8,7 @@ import { Login } from '../Pages/login'
 import { AuthProvider } from '../providers/AuthProvider';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 import { PrivateRoutes } from './privateRoutes'
-import HomeContent from '../components/home/home.container2'
+import HomeContent from '../components/home/home.container'
 
 // Create a client
 const queryClient = new QueryClient()
@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoutes
             element={<Home />}
-            notHaveAccessNavigateTo="login"
+            notHaveAccessNavigateTo="/login"
           />
         ),
         children: [
