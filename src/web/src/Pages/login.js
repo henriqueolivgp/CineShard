@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../hooks/AuthHook';
 import { useState } from 'react';
 
+import { Sidebar } from '../components/home/sidebar';
+
 export function Login() {
   const { login } = useAuth();
   const [username, setUsername] = useState('');
@@ -18,11 +20,9 @@ export function Login() {
 
   return (
     <>
-      <div className="container mx-auto bg-slate-700 h-full ">
-        <Link to={'/'}>
-          <ChevronLeft className='absolute top-2' size={40} />
-        </Link>
+      <Sidebar />
 
+      <div className="flex flex-col justify-center p-4 sm:ml-64 mx-auto bg-slate-700 h-screen ">
         <div className="content flex items-center">
           <div className="flex items-center content-center min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -32,7 +32,7 @@ export function Login() {
                 alt="Your Company"
               />
               <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">
-                Sign in to your account
+                Sign in
               </h2>
             </div>
 
