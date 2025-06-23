@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../hooks/AuthHook';
 import { useState } from 'react';
 
+import { Sidebar } from '../components/home/sidebar';
+
 // Dentro da export function ate ao return vao os scripts de comunicacao do front com o back
 export function Register() {
 
@@ -12,7 +14,7 @@ export function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await register({username, password});
+    await register({ username, password });
 
     console.log('data do front' + username, password)
 
@@ -20,10 +22,10 @@ export function Register() {
 
   return (
     <>
-      {/* aqui vai o codigo HTML */}
 
-      <div className="container mx-auto bg-slate-700 h-full ">
-        <Link to={'/'}><ChevronLeft className='absolute top-2' size={40} /></Link>
+      <Sidebar />
+
+      <div className="flex flex-col justify-center p-4 sm:ml-64 mx-auto bg-slate-700 h-screen ">
         <div className="content flex items-center">
           <div className="flex items-center content-center min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -52,7 +54,7 @@ export function Register() {
                       onChange={(e) => setUsername(e.target.value)}
                       placeholder='username'
                       required
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
@@ -73,7 +75,7 @@ export function Register() {
                       autoComplete="current-password"
                       placeholder='*******'
                       required
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
