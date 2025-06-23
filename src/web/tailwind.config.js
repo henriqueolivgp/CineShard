@@ -9,6 +9,8 @@ module.exports = {
       // => @media (min-width: 300px) { ... }
       'xl': '1280px',
       // => @media (min-width: 1280px) { ... }
+      'sm': '680px',
+      // => @media (min-width: 680px) { ... }
     },
     extend: {},
   },
