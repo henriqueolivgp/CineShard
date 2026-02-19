@@ -1,11 +1,11 @@
-<img width="764" height="502" alt="image" src="https://github.com/user-attachments/assets/521134fa-acb6-4572-b41a-a5130618521d" /><p align="center">
-  <img width="200px" alt="Project Logo" title="Project Title Logo" src="https://github.com/henriqueolivgp/CineShard/blob/main/src/web/public/logo192.png" />
+<div align="center">
+  <img width="100px" align="center" alt="Project Logo" title="Project Title Logo" src="https://github.com/henriqueolivgp/CineShard/blob/main/src/web/public/logo192.png" />
   
   <h1 align="center">Cine Shard</h1>
-  
+</div>
+<p>
   This project is a created in university context.
   The Cine Shard consists an microservice project where you can autenticate in one data base, you can manage movies ( in other data base ) imported by an js importer from a json file and you can make all this things in one front-end developed in React in js. The 2 data basses works one depnds the other and if auth data base doesn't work the Movies data base doesn't work to. The project has three types of users: "Viewer", "Edit", and "Admin".
-
 </p>
 
 
