@@ -20,7 +20,7 @@
 
 ## 👏 Learning and more Implementations
 
-I learned a lot about MongoDB, Cloudflare R2 and Next.js API. I really loved using it but i still need to learn more and improve my logic, I intend to study more and more and don't give up!!!
+I learned a lot about Docker, Nest.js, Tanstack Query and microservices development. I really loved using it but i still need to learn more and improve my logic, I intend to study more and more and don't give up!!!
 ## 💡 Technologies Used
 
 - [x] [Nest.js](https://nestjs.com/)
